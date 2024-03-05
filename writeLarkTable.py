@@ -17,15 +17,15 @@ from pandasql import sqldf
 
 #sql 取数函数
 def get_sql_data(sql):
-    bad_password = 'Yunying@LaiPic2021!'
+    bad_password = ''
     passowrd = parse.quote_plus(bad_password)
 
     # 配置链接数据库信息(Fixed)
     db_config = {
-        'host': '121.37.225.154',
-        'port': '3306',
-        'database': 'laihua_new',
-        'username': 'yunying',
+        'host': '',
+        'port': '',
+        'database': '',
+        'username': '',
         'password': passowrd
     }
     # 数据库链接地址
@@ -365,7 +365,7 @@ if __name__ == "__main__":
     print(todayLaipicDF)
 
     #一个多维表格视为一个app，在其连接中含有app_token
-    doc_url = 'https://iwfrvtzly5n.feishu.cn/base/PXXzbw3avaYim2sPPoccAGZMn4O?table=tblCbyOGj82e7mN0&view=vewAvoFkXn'
+    doc_url = ''
     app_token = doc_url[doc_url.find('base/') + len('base/'):doc_url.find('?')]
 
     #获取token
