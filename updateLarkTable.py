@@ -20,15 +20,15 @@ import numpy as np
 
 #sql 取数函数
 def get_sql_data(sql):
-    bad_password = 'Yunying@LaiPic2021!'
+    bad_password = ''
     passowrd = parse.quote_plus(bad_password)
 
     # 配置链接数据库信息(Fixed)
     db_config = {
-        'host': '121.37.225.154',
+        'host': '',
         'port': '3306',
-        'database': 'laihua_new',
-        'username': 'yunying',
+        'database': '',
+        'username': '',
         'password': passowrd
     }
     # 数据库链接地址
@@ -154,8 +154,8 @@ def get_laipicDB_df():
 def get_token():
     # 获取访问凭证
     data1 = {
-        "app_id": 'cli_a552f5a7087dd00e',
-        "app_secret": 'QGl5rF4wvHGrt6TjLpmIXcNPsSQ5OmLz'
+        "app_id": '',
+        "app_secret": ''
     }
     response = requests.post('https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal/', data=data1)
     # print(response.json())
@@ -433,11 +433,11 @@ if __name__ == "__main__":
 
     # 运营数据库链接配置
     db_config = {
-        'host': '116.205.228.171',
-        'port': '3306',
-        'database': 'larkAutoDoc',
-        'username': 'yunying_admin',
-        'password': 'LwaK%^6xMRwD'
+        'host': '',
+        'port': '',
+        'database': '',
+        'username': '',
+        'password': ''
     }
     # 数据库链接地址
     db_url1 = 'mysql+pymysql://{username}:{password}@{host}:{port}/{database}?charset=utf8'.format(
